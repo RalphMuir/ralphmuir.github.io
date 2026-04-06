@@ -292,3 +292,31 @@ footer {
   .nav-toggle { display: block; }
   footer { flex-direction: column; text-align: center; }
 }
+
+/* ── Character idle animations ── */
+@keyframes char-float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+  30%     { transform: rotate(-3deg); }
+  70%     { transform: rotate(3deg); }
+}
+
+  20%     { transform: skewX(-4deg) translateX(-3px); }
+  50%     { transform: skewX(5deg) translateX(4px); }
+  80%     { transform: skewX(-3deg) translateX(-2px); }
+}
+
+  40%     { transform: translateY(-12px) scaleY(1.04); }
+  60%     { transform: translateY(-10px) scaleY(1.02); }
+}
+
+  25%     { transform: rotate(-5deg); }
+  75%     { transform: rotate(2deg); }
+}
+
+.char-inner img {
+  transform-origin: bottom center;
+  animation: char-float 4s ease-in-out infinite;
+}

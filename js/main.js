@@ -31,3 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   els.forEach(el => obs.observe(el));
 });
+
+
+// ── Character Float Animation ──
+document.addEventListener('DOMContentLoaded', () => {
+  const charImg = document.querySelector('.char-inner img');
+  if (charImg) {
+    charImg.style.animation = 'char-float 4s ease-in-out infinite';
+  }
+});
